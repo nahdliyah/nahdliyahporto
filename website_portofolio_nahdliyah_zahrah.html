@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nahdliyah Zahrah — Portofolio Data Analyst &amp; Sains Data</title>
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 dark:bg-[#080C14] dark:text-slate-100 font-sans antialiased transition-colors duration-300 selection:bg-indigo-600 selection:text-white">
+
+  <!-- =========================================================
+       DEKORASI LATAR BELAKANG HALUS
+  ========================================================= -->
+  <div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+    <div class="absolute -top-40 -right-32 w-[28rem] h-[28rem] rounded-full bg-indigo-500/10 dark:bg-indigo-500/15 blur-3xl"></div>
+    <div class="absolute top-1/2 -left-40 w-[24rem] h-[24rem] rounded-full bg-emerald-500/10 dark:bg-emerald-500/10 blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/4 w-[22rem] h-[22rem] rounded-full bg-slate-400/10 dark:bg-violet-500/10 blur-3xl"></div>
+  </div>
+
+  <!-- =========================================================
+       NAVIGASI ATAS
+  ========================================================= -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-xl bg-white/85 dark:bg-[#080C14]/85 border-b border-slate-200/70 dark:border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <!-- Identitas -->
+      <a href="#beranda" class="flex items-center gap-3 group">
+        <span class="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-mono text-sm font-bold shadow-sm group-hover:bg-indigo-700 transition-colors">
+          NZ
+        </span>
+        <div class="leading-tight">
+          <span class="font-bold text-base tracking-tight text-slate-900 dark:text-white block">Nahdliyah Zahrah</span>
+          <span class="font-mono text-[11px] text-slate-500 dark:text-slate-400 block">Sains Data &amp; Analitik</span>
+        </div>
+      </a>
+
+      <!-- Menu Navigasi Desktop (Tanpa Angka Jumlah Proyek) -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-100/90 dark:bg-slate-900/90 p-1 rounded-2xl border border-slate-200/70 dark:border-slate-800">
+        <a href="#proyek" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-slate-800 transition-all">Proyek &amp; Studi Kasus</a>
+        <a href="#keahlian" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-slate-800 transition-all">Keahlian</a>
+        <a href="#perjalanan" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-slate-800 transition-all">Pengalaman</a>
+        <a href="#sertifikasi" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-slate-800 transition-all">Sertifikasi</a>
+        <a href="#kontak" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-slate-800 transition-all">Kontak</a>
+      </nav>
+
+      <!-- Tombol Tema & Kontak -->
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" type="button" aria-label="Ubah Tema"
+          class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <svg id="icon-sun" class="w-4 h-4 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg id="icon-moon" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <a href="#kontak" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-sm transition-colors">
+          Hubungi Saya
+        </a>
+
+        <button id="mobile-menu-btn" type="button" aria-label="Menu"
+          class="md:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Dropdown Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-3 space-y-1">
+      <a href="#proyek" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-900">Proyek &amp; Studi Kasus</a>
+      <a href="#keahlian" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-900">Keahlian</a>
+      <a href="#perjalanan" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-900">Pengalaman &amp; Pendidikan</a>
+      <a href="#sertifikasi" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-900">Sertifikasi</a>
+      <a href="#kontak" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-900">Kontak</a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <!-- =========================================================
+         BAGIAN 1: HERO & RINGKASAN PROFIL
+    ========================================================= -->
+    <section id="beranda" class="py-12 sm:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+
+        <!-- Kolom Kiri: Perkenalan Sopan & Lugas -->
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border border-indigo-500/20 mb-6">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span>Terbuka untuk Peluang Kerja • Data Analyst / BI Analyst / Junior Data Scientist</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.18] mb-5">
+            Mengolah Data Menjadi <span class="text-indigo-600 dark:text-indigo-400">Informasi yang Terstruktur dan Mudah Dipahami.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8">
+            Perkenalkan, saya <strong class="font-bold text-slate-900 dark:text-white">Nahdliyah Zahrah</strong>, lulusan <strong class="font-bold text-slate-900 dark:text-white">S1 Sains Data Universitas Negeri Surabaya</strong>. Saya memiliki pengalaman dalam pembersihan dan analisis data, pembuatan dashboard interaktif menggunakan Tableau dan Streamlit, peramalan tren (<em>forecasting</em>), serta penerapan model <em>machine learning</em> dan pemrosesan teks.
+          </p>
+
+          <!-- Tombol Aksi Utama -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+            <a href="#proyek"
+              class="px-6 py-3.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm shadow-md shadow-indigo-600/20 transition-all flex items-center gap-2">
+              <span>Lihat Proyek Saya</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+
+            <button id="copy-email-btn" type="button" data-email="nahdliyahzahrah@gmail.com"
+              class="px-5 py-3.5 rounded-2xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-100 font-semibold text-sm border border-slate-200 dark:border-slate-800 transition-all flex items-center gap-2">
+              <svg class="w-4 h-4 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              <span>Salin Email</span>
+            </button>
+
+            <!-- =================================================================
+                 TOMBOL LINKEDIN & GITHUB (MASIH DIKOMENTARI / DINONAKTIFKAN)
+                 Cara mengaktifkan: Hapus tanda "<!--" di atas dan "-->" di bawah,
+                 lalu sesuaikan tautan LinkedIn & GitHub Anda.
+            ================================================================== -->
+            <!--
+            <a href="https://www.linkedin.com/in/nahdliyah-zahrah" target="_blank" rel="noopener noreferrer"
+              class="px-5 py-3.5 rounded-2xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-100 font-semibold text-sm border border-slate-200 dark:border-slate-800 transition-all flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="https://github.com/nahdliyah" target="_blank" rel="noopener noreferrer"
+              class="px-5 py-3.5 rounded-2xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-100 font-semibold text-sm border border-slate-200 dark:border-slate-800 transition-all flex items-center gap-2">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+              <span>GitHub</span>
+            </a>
+            -->
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Kartu Profil Sederhana & Rapi -->
+        <div class="lg:col-span-5">
+          <div class="p-6 rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800 shadow-lg shadow-slate-200/40 dark:shadow-none space-y-5">
+            <!-- Header Kartu Profil -->
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center overflow-hidden shrink-0">
+                <!-- Jika ingin memasang foto profil asli: hapus span di bawah dan aktifkan tag img -->
+                <span class="font-extrabold text-xl text-indigo-600 dark:text-indigo-400">NZ</span>
+                <!-- <img src="foto-profil.jpg" alt="Nahdliyah Zahrah" class="w-full h-full object-cover" /> -->
+              </div>
+              <div>
+                <h2 class="font-bold text-lg text-slate-900 dark:text-white">Nahdliyah Zahrah</h2>
+                <p class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1 mt-0.5">
+                  <svg class="w-3.5 h-3.5 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Surabaya, Jawa Timur
+                </p>
+                <span class="inline-block mt-1.5 px-2.5 py-0.5 rounded-lg font-mono text-[11px] font-medium bg-indigo-50 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-300">
+                  S1 Sains Data • UNESA
+                </span>
+              </div>
+            </div>
+
+            <!-- Ringkasan Akademik (Tanpa Angka Jumlah Proyek) -->
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/50">
+                <span class="font-mono text-[11px] text-slate-500 dark:text-slate-400 block">Indeks Prestasi</span>
+                <span class="text-lg font-extrabold text-slate-900 dark:text-white mt-0.5 block">IPK 3.70 / 4.00</span>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/50">
+                <span class="font-mono text-[11px] text-slate-500 dark:text-slate-400 block">Masa Studi</span>
+                <span class="text-lg font-extrabold text-indigo-600 dark:text-indigo-400 mt-0.5 block">2022 – 2026</span>
+              </div>
+            </div>
+
+            <!-- Bidang yang Ditekuni -->
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/70 dark:border-slate-800 space-y-2">
+              <span class="font-mono text-[11px] font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 block">
+                Bidang yang Saya Tekuni
+              </span>
+              <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                <strong>Analisis Data &amp; Dashboard:</strong> Pembersihan data, eksplorasi pola transaksi, peramalan tren (SARIMAX), serta visualisasi menggunakan Tableau dan Streamlit.
+              </p>
+              <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                <strong>Machine Learning &amp; Teks:</strong> Sistem rekomendasi (ItemKNN, FM, DeepFM), pengelompokan pelanggan (K-Means), klasifikasi, dan analisis sentimen.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BAGIAN 2: KATALOG PROYEK & STUDI KASUS (TANPA ANGKA JUMLAH)
+    ========================================================= -->
+    <section id="proyek" class="py-14 sm:py-20 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5 mb-10">
+        <div>
+          <span class="font-mono text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+            Portofolio Karya
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-1">
+            Proyek &amp; Studi Kasus Data
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-1">
+            Klik pada setiap kartu untuk melihat rincian <strong class="font-semibold text-slate-800 dark:text-slate-200">Latar Belakang &rarr; Proses Pengerjaan &rarr; Hasil</strong>.
+          </p>
+        </div>
+
+        <!-- Filter Kategori (Tanpa Angka Jumlah) -->
+        <div class="flex flex-wrap gap-2" id="project-filters">
+          <button type="button" data-filter="all"
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white shadow-sm transition-all">
+            Semua Proyek
+          </button>
+          <button type="button" data-filter="featured"
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+            Magang, MSIB &amp; Skripsi
+          </button>
+          <button type="button" data-filter="bi"
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+            Dashboard &amp; Visualisasi
+          </button>
+          <button type="button" data-filter="ml"
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+            Machine Learning &amp; NLP
+          </button>
+          <button type="button" data-filter="algo"
+            class="filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+            Algoritma &amp; Struktur Data
+          </button>
+        </div>
+      </div>
+
+      <!-- Grid Kartu Proyek -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Di-render otomatis oleh JavaScript -->
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BAGIAN 3: KEAHLIAN & PERANGKAT KERJA
+    ========================================================= -->
+    <section id="keahlian" class="py-14 sm:py-20 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div class="mb-10">
+        <span class="font-mono text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+          Keterampilan Teknis
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-1">
+          Keahlian &amp; Tools yang Saya Gunakan
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-1">
+          Perangkat pemrograman, basis data, visualisasi, dan pemodelan yang saya pelajari serta terapkan dalam berbagai proyek.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Pillar 1 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
+          <div class="w-10 h-10 rounded-2xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4 font-mono font-bold text-sm">
+            &lt;/&gt;
+          </div>
+          <h3 class="font-bold text-base text-slate-900 dark:text-white mb-3">Pemrograman &amp; Data</h3>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg font-mono text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">Python</span>
+            <span class="px-2.5 py-1 rounded-lg font-mono text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">SQL</span>
+            <span class="px-2.5 py-1 rounded-lg font-mono text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">Pandas</span>
+            <span class="px-2.5 py-1 rounded-lg font-mono text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">NumPy</span>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
+          <div class="w-10 h-10 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 dark:text-white mb-3">Dashboard &amp; Basis Data</h3>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/70 text-indigo-700 dark:text-indigo-300">Tableau</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/70 text-indigo-700 dark:text-indigo-300">Streamlit</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">PostgreSQL</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">Plotly</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">Matplotlib</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
+          <div class="w-10 h-10 rounded-2xl bg-violet-500/10 text-violet-600 dark:text-violet-400 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 dark:text-white mb-3">Analisis Data</h3>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">Data Cleaning</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">EDA &amp; Deteksi Outlier</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">Forecasting (SARIMAX)</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">Web Scraping</span>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800">
+          <div class="w-10 h-10 rounded-2xl bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 dark:text-white mb-3">Machine Learning &amp; Tools</h3>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">K-Means &amp; SVM</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">ItemKNN, FM &amp; DeepFM</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">Text Processing</span>
+            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">Git &amp; Railway</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BAGIAN 4: PENGALAMAN, PENDIDIKAN & ORGANISASI
+    ========================================================= -->
+    <section id="perjalanan" class="py-14 sm:py-20 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div class="mb-10">
+        <span class="font-mono text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+          Latar Belakang
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-1">
+          Pengalaman, Pendidikan &amp; Organisasi
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Item 1: Magang -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-1.5">
+              <span class="px-2.5 py-0.5 rounded-lg text-xs font-semibold bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">Magang Divisi IT</span>
+              <span class="font-mono text-xs text-slate-500 dark:text-slate-400">Februari 2025 – Juni 2025</span>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white">Data Analytics / Dashboard Development Intern</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">
+              <strong>PT Ladang Karya Husada</strong> • Melakukan pembersihan dan validasi data transaksi, mengembangkan dashboard pemantauan berbasis Streamlit dan PostgreSQL, menambahkan fitur peramalan (SARIMAX), serta melakukan pengujian bersama tim IT.
+            </p>
+          </div>
+          <button type="button" onclick="openProjectById(1)" class="shrink-0 text-left sm:text-right text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+            Lihat Detail Proyek &rarr;
+          </button>
+        </div>
+
+        <!-- Item 2: Studi Independen -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-1.5">
+              <span class="px-2.5 py-0.5 rounded-lg text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">Studi Independen (MSIB)</span>
+              <span class="font-mono text-xs text-slate-500 dark:text-slate-400">Desember 2024</span>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white">Data Analyst Project — Bitlabs Academy &times; DOKU</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">
+              Menganalisis performa kampanye promo dan perilaku transaksi pelanggan, melakukan segmentasi pelanggan dengan K-Means, serta menyusun Campaign Analytics Dashboard menggunakan Tableau.
+            </p>
+          </div>
+          <button type="button" onclick="openProjectById(2)" class="shrink-0 text-left sm:text-right text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+            Lihat Detail Proyek &rarr;
+          </button>
+        </div>
+
+        <!-- Item 3: Organisasi -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-1.5">
+              <span class="px-2.5 py-0.5 rounded-lg text-xs font-semibold bg-amber-500/10 text-amber-700 dark:text-amber-300">Organisasi Mahasiswa</span>
+              <span class="font-mono text-xs text-slate-500 dark:text-slate-400">HMP Sains Data UNESA</span>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white">Staff Divisi Agama &amp; Koordinator Sie Konsumsi</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">
+              Berperan aktif dalam kegiatan Divisi Agama HMP Sains Data serta dipercaya menjadi Koordinator Sie Konsumsi pada acara Talkshow Agama dengan mengatur koordinasi tim dan efisiensi anggaran konsumsi acara.
+            </p>
+          </div>
+          <span class="shrink-0 font-mono text-xs font-semibold px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+            Kerja Tim &amp; Koordinasi
+          </span>
+        </div>
+
+        <!-- Item 4: Pendidikan -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-1.5">
+              <span class="px-2.5 py-0.5 rounded-lg text-xs font-semibold bg-violet-500/10 text-violet-600 dark:text-violet-400">Pendidikan Tinggi (S1)</span>
+              <span class="font-mono text-xs text-slate-500 dark:text-slate-400">Agustus 2022 – Juli 2026</span>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white">S1 Sains Data — Universitas Negeri Surabaya</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">
+              Mata Kuliah Relevan: Data Mining, Machine Learning, Text Processing, Analisis Multivariat, Basis Data, Kecerdasan Buatan, Struktur Data &amp; Algoritma.
+            </p>
+          </div>
+          <span class="shrink-0 font-mono text-xs font-bold px-3.5 py-2 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800">
+            IPK 3.70 / 4.00
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BAGIAN 5: SERTIFIKASI & PELATIHAN
+    ========================================================= -->
+    <section id="sertifikasi" class="py-14 sm:py-20 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div class="mb-10">
+        <span class="font-mono text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+          Pelatihan &amp; Sertifikat
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-1">
+          Sertifikasi Terpilih
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <!-- Sertifikat 1 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-emerald-500/10 text-emerald-700 dark:text-emerald-300">
+                Kampus Merdeka (MSIB 7)
+              </span>
+              <span class="font-mono text-xs text-slate-400">2024</span>
+            </div>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white leading-snug">
+              Studi Independen Bersertifikat Angkatan 7
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5">
+              Mitra: PT Indobit Digital Raya (Bitlabs Academy)
+            </p>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 font-mono text-[11px] text-slate-500 dark:text-slate-400">
+            ID Kegiatan: 10863828
+          </div>
+        </div>
+
+        <!-- Sertifikat 2 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-500/10 text-amber-700 dark:text-amber-300">
+                AWS Certification
+              </span>
+              <span class="font-mono text-xs text-slate-400">Apr 2024</span>
+            </div>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white leading-snug">
+              Cloud Essentials Knowledge Badge Assessment
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5">
+              Penerbit: AWS Training and Certification
+            </p>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 font-mono text-[11px] text-slate-500 dark:text-slate-400">
+            Certificate of Completion
+          </div>
+        </div>
+
+        <!-- Sertifikat 3 -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-sky-500/10 text-sky-700 dark:text-sky-300">
+                DTS Kominfo
+              </span>
+              <span class="font-mono text-xs text-slate-400">Sep 2022</span>
+            </div>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white leading-snug">
+              Pengenalan Metaverse di Indonesia (Metaverse 101) Batch 2
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1.5">
+              Program Thematic Academy • Digital Talent Scholarship
+            </p>
+          </div>
+          <div class="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800 font-mono text-[11px] text-slate-500 dark:text-slate-400 truncate" title="TA/2022/3808/1463808/1900-12">
+            No: TA/2022/3808/1463808/1900-12
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BAGIAN 6: KONTAK & PENUTUP
+    ========================================================= -->
+    <section id="kontak" class="py-14 sm:py-20 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div class="relative overflow-hidden p-8 sm:p-14 rounded-3xl bg-slate-900 dark:bg-indigo-950/90 text-white text-center border border-slate-800 dark:border-indigo-800/50 shadow-xl">
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <span class="font-mono text-xs uppercase tracking-widest text-indigo-400 block mb-3">
+            Informasi Kontak
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-4">
+            Terima Kasih Telah Mengunjungi Portofolio Saya
+          </h2>
+          <p class="text-sm sm:text-base text-slate-300 mb-8 leading-relaxed">
+            Saya berdomisili di Surabaya dan terbuka untuk diskusi maupun kesempatan bergabung sebagai <strong>Data Analyst</strong>, <strong>Business Intelligence Analyst</strong>, atau <strong>Junior Data Scientist</strong>.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-3">
+            <a href="https://wa.me/6281235780107" target="_blank" rel="noopener noreferrer"
+              class="px-6 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/20">
+              WhatsApp (+62 812-3578-0107)
+            </a>
+            <a href="mailto:nahdliyahzahrah@gmail.com"
+              class="px-6 py-3.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white border border-white/15 font-semibold text-sm transition-all">
+              nahdliyahzahrah@gmail.com
+            </a>
+
+            <!-- =================================================================
+                 TOMBOL LINKEDIN & GITHUB BAGIAN KONTAK (DIKOMENTARI)
+                 Hapus tanda "<!--" dan "-->" apabila profil LinkedIn & GitHub sudah siap.
+            ================================================================== -->
+            <!--
+            <a href="https://www.linkedin.com/in/nahdliyah-zahrah" target="_blank" rel="noopener noreferrer"
+              class="px-6 py-3.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white border border-white/15 font-semibold text-sm transition-all">
+              LinkedIn Profile
+            </a>
+            <a href="https://github.com/nahdliyah" target="_blank" rel="noopener noreferrer"
+              class="px-6 py-3.5 rounded-2xl bg-white/10 hover:bg-white/20 text-white border border-white/15 font-semibold text-sm transition-all">
+              github.com/nahdliyah
+            </a>
+            -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200/80 dark:border-slate-800/80">
+    <p>&copy; <span id="year"></span> Nahdliyah Zahrah • Portofolio Sains Data &amp; Analitik.</p>
+  </footer>
+
+  <!-- =========================================================
+       MODAL RINCIAN PROYEK
+  ========================================================= -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative">
+      <button id="close-modal" type="button" aria-label="Tutup"
+        class="absolute top-5 right-5 p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notifikasi -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 translate-y-20 opacity-0 pointer-events-none transition-all duration-300 px-4 py-3 rounded-2xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold shadow-xl">
+    Alamat email berhasil disalin!
+  </div>
+
+  <!-- =========================================================
+       JAVASCRIPT: VISUAL & DATA PROYEK (BAHASA SOPAN & LUGAS)
+  ========================================================= -->
+  <script>
+    const visuals = {
+      siplahStreamlit: `
+        <svg viewBox="0 0 400 220" class="w-full h-full bg-slate-50">
+          <rect x="0" y="0" width="96" height="220" fill="#f1f5f9"/>
+          <rect x="10" y="22" width="76" height="20" rx="5" fill="#ef4444"/>
+          <text x="24" y="35" fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold">Dashboard</text>
+          <rect x="14" y="52" width="62" height="6" rx="3" fill="#cbd5e1"/>
+          <rect x="14" y="68" width="68" height="6" rx="3" fill="#cbd5e1"/>
+          <rect x="14" y="84" width="58" height="6" rx="3" fill="#cbd5e1"/>
+          <rect x="14" y="100" width="65" height="6" rx="3" fill="#cbd5e1"/>
+          <text x="112" y="34" fill="#1e293b" font-family="sans-serif" font-size="11" font-weight="800">Monitoring Transaksi SIPLah</text>
+          <rect x="112" y="48" width="62" height="44" rx="6" fill="#eff6ff" stroke="#dbeafe"/>
+          <text x="118" y="62" fill="#2563eb" font-family="sans-serif" font-size="6.5" font-weight="bold">Total PO</text>
+          <text x="118" y="81" fill="#1e293b" font-family="sans-serif" font-size="11" font-weight="800">2.8 Jt</text>
+          <rect x="180" y="48" width="62" height="44" rx="6" fill="#eff6ff" stroke="#dbeafe"/>
+          <text x="186" y="62" fill="#2563eb" font-family="sans-serif" font-size="6.5" font-weight="bold">Total Nominal</text>
+          <text x="186" y="81" fill="#1e293b" font-family="sans-serif" font-size="11" font-weight="800">11.1 T</text>
+          <rect x="248" y="48" width="62" height="44" rx="6" fill="#eff6ff" stroke="#dbeafe"/>
+          <text x="254" y="62" fill="#2563eb" font-family="sans-serif" font-size="6.5" font-weight="bold">Total PPh 22</text>
+          <text x="254" y="81" fill="#1e293b" font-family="sans-serif" font-size="11" font-weight="800">51.0 M</text>
+          <rect x="316" y="48" width="68" height="44" rx="6" fill="#eff6ff" stroke="#dbeafe"/>
+          <text x="322" y="62" fill="#2563eb" font-family="sans-serif" font-size="6.5" font-weight="bold">Total PPN</text>
+          <text x="322" y="81" fill="#1e293b" font-family="sans-serif" font-size="11" font-weight="800">850.6 M</text>
+          <text x="112" y="114" fill="#334155" font-family="sans-serif" font-size="9" font-weight="bold">Tren PO Bulanan &amp; Prediksi SARIMAX</text>
+          <rect x="112" y="122" width="272" height="80" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+          <path d="M126 184 L162 170 L198 175 L234 152 L270 158 L306 140" fill="none" stroke="#4f46e5" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M306 140 L338 132 L368 128" fill="none" stroke="#10b981" stroke-width="2.5" stroke-dasharray="4 3" stroke-linecap="round"/>
+          <circle cx="306" cy="140" r="3.5" fill="#4f46e5"/>
+          <circle cx="368" cy="128" r="3.5" fill="#10b981"/>
+        </svg>
+      `,
+      dokuTableau: `
+        <svg viewBox="0 0 400 220" class="w-full h-full bg-white">
+          <text x="16" y="24" fill="#dc2626" font-family="sans-serif" font-size="10.5" font-weight="900">CAMPAIGN ANALYTICS DASHBOARD</text>
+          <rect x="336" y="10" width="48" height="18" rx="4" fill="#dc2626"/>
+          <text x="344" y="22" fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold">DOKU</text>
+          <rect x="14" y="32" width="372" height="176" fill="none" stroke="#b91c1c" stroke-width="2.5"/>
+          <rect x="18" y="36" width="256" height="14" fill="#0d9488"/>
+          <text x="26" y="46" fill="#ffffff" font-family="sans-serif" font-size="7" font-weight="bold">108,594 Transaksi  •  23,207 Customer  •  $7,525.76M Revenue</text>
+          <rect x="18" y="54" width="136" height="68" fill="#f8fafc" stroke="#cbd5e1"/>
+          <path d="M26 108 L44 86 L62 104 L80 92 L98 76 L116 84 L134 66 L146 96" fill="none" stroke="#0d9488" stroke-width="2"/>
+          <rect x="158" y="54" width="116" height="68" fill="#f8fafc" stroke="#cbd5e1"/>
+          <rect x="166" y="64" width="96" height="7" rx="2" fill="#0d9488"/>
+          <rect x="166" y="75" width="92" height="7" rx="2" fill="#0d9488"/>
+          <rect x="166" y="86" width="84" height="7" rx="2" fill="#14b8a6"/>
+          <rect x="166" y="97" width="56" height="7" rx="2" fill="#94a3b8"/>
+          <rect x="166" y="108" width="36" height="7" rx="2" fill="#f87171"/>
+          <rect x="158" y="126" width="116" height="78" fill="#f8fafc" stroke="#cbd5e1"/>
+          <circle cx="216" cy="166" r="22" fill="none" stroke="#dc2626" stroke-width="8"/>
+          <path d="M216 144 A22 22 0 0 1 236 174" fill="none" stroke="#0d9488" stroke-width="8"/>
+          <rect x="278" y="36" width="104" height="168" fill="#f8fafc" stroke="#cbd5e1"/>
+          <rect x="278" y="36" width="104" height="14" fill="#0d9488"/>
+          <text x="284" y="46" fill="#ffffff" font-family="sans-serif" font-size="6.5" font-weight="bold">Campaign Engagement</text>
+          <rect x="286" y="58" width="86" height="8" rx="2" fill="#ef4444"/>
+          <rect x="286" y="72" width="42" height="7" rx="2" fill="#94a3b8"/>
+          <rect x="286" y="85" width="34" height="7" rx="2" fill="#94a3b8"/>
+          <rect x="286" y="98" width="28" height="7" rx="2" fill="#94a3b8"/>
+          <rect x="286" y="111" width="24" height="7" rx="2" fill="#94a3b8"/>
+        </svg>
+      `,
+      recommenderSkripsi: `
+        <svg viewBox="0 0 400 220" class="w-full h-full bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900">
+          <text x="34" y="34" fill="#a5b4fc" font-family="monospace" font-size="9" font-weight="bold">INSTAGRAM RECOMMENDER EVALUATION (RECBOLE)</text>
+          <!-- Input Features -->
+          <rect x="34" y="56" width="84" height="28" rx="7" fill="#1e293b" stroke="#6366f1"/>
+          <text x="44" y="74" fill="#e0e7ff" font-family="monospace" font-size="8.5">Implicit Data</text>
+          <rect x="34" y="102" width="84" height="28" rx="7" fill="#1e293b" stroke="#6366f1"/>
+          <text x="42" y="120" fill="#e0e7ff" font-family="monospace" font-size="8.5">Text Embedding</text>
+          <!-- 3 Models Compared -->
+          <rect x="146" y="48" width="112" height="26" rx="7" fill="#312e81" stroke="#818cf8"/>
+          <text x="178" y="65" fill="#ffffff" font-family="monospace" font-size="9" font-weight="bold">ItemKNN</text>
+          <rect x="146" y="86" width="112" height="26" rx="7" fill="#312e81" stroke="#818cf8"/>
+          <text x="168" y="103" fill="#ffffff" font-family="monospace" font-size="9" font-weight="bold">FM Model</text>
+          <rect x="146" y="124" width="112" height="26" rx="7" fill="#4f46e5" stroke="#a5b4fc"/>
+          <text x="176" y="141" fill="#ffffff" font-family="monospace" font-size="9" font-weight="bold">DeepFM</text>
+          <!-- Metrics -->
+          <rect x="284" y="64" width="82" height="28" rx="7" fill="#064e3b" stroke="#34d399"/>
+          <text x="296" y="82" fill="#6ee7b7" font-family="monospace" font-size="9" font-weight="bold">Recall@K</text>
+          <rect x="284" y="106" width="82" height="28" rx="7" fill="#064e3b" stroke="#34d399"/>
+          <text x="300" y="124" fill="#6ee7b7" font-family="monospace" font-size="9" font-weight="bold">NDCG@K</text>
+          <!-- Connectors -->
+          <path d="M118 70 L146 61 M118 70 L146 99 M118 116 L146 99 M118 116 L146 137" stroke="#6366f1" stroke-width="1.3"/>
+          <path d="M258 61 L284 78 M258 99 L284 99 M258 137 L284 120" stroke="#34d399" stroke-width="1.3"/>
+          <text x="34" y="182" fill="#94a3b8" font-family="monospace" font-size="8.5">Sentence Transformer • Python • RecBole Framework</text>
+        </svg>
+      `,
+      nlpOcr: `
+        <svg viewBox="0 0 400 220" class="w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          <rect x="34" y="34" width="142" height="152" rx="14" fill="#1e293b" stroke="#475569"/>
+          <text x="48" y="58" fill="#93c5fd" font-family="monospace" font-size="9.5" font-weight="bold">INPUT: TEKS &amp; OCR</text>
+          <rect x="48" y="72" width="114" height="10" rx="4" fill="#334155"/>
+          <rect x="48" y="90" width="94" height="10" rx="4" fill="#334155"/>
+          <rect x="48" y="108" width="106" height="10" rx="4" fill="#334155"/>
+          <rect x="48" y="138" width="114" height="32" rx="8" fill="#0f172a" stroke="#64748b"/>
+          <text x="58" y="158" fill="#cbd5e1" font-family="monospace" font-size="8.5">9 Tahap Preprocessing</text>
+          <path d="M184 110 L218 110" stroke="#34d399" stroke-width="2.5" stroke-dasharray="4 3"/>
+          <rect x="224" y="48" width="142" height="124" rx="14" fill="#064e3b" fill-opacity="0.45" stroke="#34d399"/>
+          <text x="238" y="74" fill="#6ee7b7" font-family="monospace" font-size="9.5" font-weight="bold">Linear SVM + BoW</text>
+          <text x="238" y="108" fill="#ffffff" font-family="sans-serif" font-size="24" font-weight="800">90.50%</text>
+          <text x="238" y="128" fill="#a7f3d0" font-family="monospace" font-size="9">Akurasi • F1: 0.90</text>
+          <text x="238" y="152" fill="#cbd5e1" font-family="monospace" font-size="8.5">Aplikasi GUI + OCR</text>
+        </svg>
+      `,
+      hybridMovie: `
+        <svg viewBox="0 0 400 220" class="w-full h-full bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-900">
+          <rect x="32" y="34" width="104" height="44" rx="10" fill="#1e293b" stroke="#818cf8"/>
+          <text x="44" y="54" fill="#c7d2fe" font-family="monospace" font-size="8.5" font-weight="bold">Content-Based</text>
+          <text x="44" y="68" fill="#94a3b8" font-family="monospace" font-size="8">TF-IDF + Cosine</text>
+          <rect x="32" y="88" width="104" height="44" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+          <text x="44" y="108" fill="#7dd3fc" font-family="monospace" font-size="8.5" font-weight="bold">Collaborative</text>
+          <text x="44" y="122" fill="#94a3b8" font-family="monospace" font-size="8">SVD 5-Fold CV</text>
+          <rect x="32" y="142" width="104" height="44" rx="10" fill="#1e293b" stroke="#34d399"/>
+          <text x="44" y="162" fill="#6ee7b7" font-family="monospace" font-size="8.5" font-weight="bold">Sentimen LSTM</text>
+          <text x="44" y="176" fill="#94a3b8" font-family="monospace" font-size="8">Akurasi: 77.51%</text>
+          <path d="M142 56 L220 110 M142 110 L220 110 M142 164 L220 110" stroke="#a5b4fc" stroke-width="1.5"/>
+          <rect x="220" y="72" width="148" height="76" rx="14" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+          <text x="236" y="102" fill="#ffffff" font-family="sans-serif" font-size="12.5" font-weight="800">HYBRID MOVIE</text>
+          <text x="236" y="122" fill="#c7d2fe" font-family="monospace" font-size="8.5">19.183 Ulasan TMDB</text>
+        </svg>
+      `,
+      lungCancer: `
+        <svg viewBox="0 0 400 220" class="w-full h-full bg-gradient-to-br from-slate-900 via-emerald-950/60 to-slate-900">
+          <text x="36" y="36" fill="#6ee7b7" font-family="monospace" font-size="9.5" font-weight="bold">CONFUSION MATRIX (3 TINGKAT RISIKO)</text>
+          <g transform="translate(36, 48)">
+            <rect x="0" y="0" width="46" height="42" rx="6" fill="#0284c7"/>
+            <text x="16" y="25" fill="#fff" font-family="monospace" font-size="12" font-weight="bold">48</text>
+            <rect x="50" y="0" width="46" height="42" rx="6" fill="#1e293b"/>
+            <text x="69" y="25" fill="#94a3b8" font-family="monospace" font-size="11">7</text>
+            <rect x="100" y="0" width="46" height="42" rx="6" fill="#0f172a"/>
+            <text x="119" y="25" fill="#64748b" font-family="monospace" font-size="11">0</text>
+            <rect x="0" y="46" width="46" height="42" rx="6" fill="#1e293b"/>
+            <text x="19" y="71" fill="#94a3b8" font-family="monospace" font-size="11">9</text>
+            <rect x="50" y="46" width="46" height="42" rx="6" fill="#0284c7"/>
+            <text x="66" y="71" fill="#fff" font-family="monospace" font-size="12" font-weight="bold">51</text>
+            <rect x="100" y="46" width="46" height="42" rx="6" fill="#1e293b"/>
+            <text x="119" y="71" fill="#94a3b8" font-family="monospace" font-size="11">3</text>
+            <rect x="0" y="92" width="46" height="42" rx="6" fill="#0f172a"/>
+            <text x="19" y="117" fill="#64748b" font-family="monospace" font-size="11">0</text>
+            <rect x="50" y="92" width="46" height="42" rx="6" fill="#0f172a"/>
+            <text x="69" y="117" fill="#64748b" font-family="monospace" font-size="11">0</text>
+            <rect x="100" y="92" width="46" height="42" rx="6" fill="#10b981"/>
+            <text x="115" y="117" fill="#064e3b" font-family="monospace" font-size="12" font-weight="bold">82</text>
+          </g>
+          <rect x="206" y="54" width="160" height="122" rx="14" fill="#1e293b" stroke="#334155"/>
+          <text x="222" y="82" fill="#94a3b8" font-family="monospace" font-size="9">AKURASI MODEL SVM</text>
+          <text x="222" y="116" fill="#34d399" font-family="sans-serif" font-size="28" font-weight="800">91.0%</text>
+          <text x="222" y="138" fill="#e2e8f0" font-family="monospace" font-size="9">Regresi Logistik: 90.5%</text>
+          <text x="222" y="156" fill="#94a3b8" font-family="monospace" font-size="8.5">1.000 Data Pasien</text>
+        </svg>
+      `,
+      wirawiriGraph: `
+        <svg viewBox="0 0 400 220" class="w-full h-full bg-gradient-to-br from-sky-950 via-slate-900 to-slate-900">
+          <text x="32" y="34" fill="#38bdf8" font-family="monospace" font-size="9.5" font-weight="bold">GRAF RUTE HALTE WIRAWIRI SURABAYA</text>
+          <path d="M52 156 L104 134 L152 146 L204 102 L262 114 L318 72 L356 84" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+          <path d="M104 134 L138 82 L204 102" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <circle cx="52" cy="156" r="6" fill="#34d399"/>
+          <circle cx="104" cy="134" r="5" fill="#38bdf8"/>
+          <circle cx="152" cy="146" r="5" fill="#38bdf8"/>
+          <circle cx="204" cy="102" r="5" fill="#38bdf8"/>
+          <circle cx="262" cy="114" r="5" fill="#38bdf8"/>
+          <circle cx="318" cy="72" r="5" fill="#38bdf8"/>
+          <circle cx="356" cy="84" r="6" fill="#f43f5e"/>
+          <rect x="32" y="174" width="336" height="26" rx="8" fill="#1e293b" stroke="#334155"/>
+          <text x="46" y="191" fill="#e2e8f0" font-family="monospace" font-size="9">A*: ~0,0001 dtk  |  Dijkstra: ~0,0005 dtk  |  Bellman-Ford: ~0,0038 dtk</text>
+        </svg>
+      `,
+      marketplaceAlgo: `
+        <svg viewBox="0 0 400 220" class="w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          <text x="34" y="36" fill="#fbbf24" font-family="monospace" font-size="9.5" font-weight="bold">SIMULASI MARKETPLACE &amp; STRUKTUR DATA</text>
+          <rect x="34" y="54" width="154" height="58" rx="12" fill="#1e293b" stroke="#f59e0b"/>
+          <text x="48" y="78" fill="#fcd34d" font-family="monospace" font-size="10" font-weight="bold">Binary Search</text>
+          <text x="48" y="96" fill="#cbd5e1" font-family="monospace" font-size="8.5">Pencarian Produk</text>
+          <rect x="212" y="54" width="154" height="58" rx="12" fill="#1e293b" stroke="#38bdf8"/>
+          <text x="226" y="78" fill="#7dd3fc" font-family="monospace" font-size="10" font-weight="bold">Bubble Sort</text>
+          <text x="226" y="96" fill="#cbd5e1" font-family="monospace" font-size="8.5">Pengurutan Katalog</text>
+          <rect x="34" y="128" width="332" height="58" rx="12" fill="#0f172a" stroke="#475569"/>
+          <text x="50" y="152" fill="#34d399" font-family="monospace" font-size="10" font-weight="bold">Peran: Laman Pembayaran, Chatbot &amp; Penyimpanan CSV</text>
+          <text x="50" y="170" fill="#94a3b8" font-family="monospace" font-size="8.5">Input Data Pembayaran • Pencatatan CSV • Chatbot Bantuan</text>
+        </svg>
+      `
+    };
+
+    // Data Proyek dengan Bahasa yang Sopan, Jelas, dan Mudah Dijelaskan saat Wawancara
+    const projectsData = [
+      {
+        id: 1,
+        tags: ['featured', 'bi'],
+        categoryLabel: 'Magang Divisi IT • PT Ladang Karya Husada',
+        title: 'Dashboard Monitoring Transaksi SIPLah & Peramalan SARIMAX',
+        shortDesc: 'Mengembangkan dashboard interaktif berbasis Streamlit dan PostgreSQL untuk memantau data transaksi SIPLah serta menambahkan fitur peramalan tren menggunakan SARIMAX.',
+        imageFile: 'dashboard-siplah.png',
+        fallbackSvg: visuals.siplahStreamlit,
+        tools: ['Python', 'PostgreSQL', 'Streamlit', 'Plotly', 'SARIMAX', 'Git & Railway'],
+        problem: 'Data transaksi dan pertumbuhan merchant berasal dari beberapa sumber (Google Spreadsheet dan PostgreSQL) dengan format tanggal dan tipe angka yang belum seragam, sehingga perlu dirapikan agar mudah dipantau secara berkala.',
+        process: 'Saya melakukan pembersihan dan validasi data menggunakan Python serta Pandas, menganalisis pola transaksi harian dan bulanan, serta mendeteksi nilai pencilan (outlier) dengan metode IQR. Selanjutnya, saya membangun dashboard interaktif menggunakan Streamlit, Plotly, dan PostgreSQL yang dilengkapi fitur peramalan (forecasting) SARIMAX serta melakukan deployment secara bertahap menggunakan GitHub dan Railway.',
+        result: 'Dashboard berhasil digunakan untuk memantau ringkasan transaksi (Total PO, Total Nominal, PPh 22, PPN, dan pertumbuhan merchant) berdasarkan periode, wilayah, dan metode pembayaran sesuai masukan mentor serta tim IT.',
+        externalLink: null
+      },
+      {
+        id: 2,
+        tags: ['featured', 'bi', 'ml'],
+        categoryLabel: 'Studi Independen • Bitlabs Academy × DOKU',
+        title: 'Campaign Analytics Dashboard & Segmentasi Pelanggan (Tableau + K-Means)',
+        shortDesc: 'Menganalisis efektivitas kampanye promo DOKU menggunakan Tableau serta mengelompokkan perilaku pelanggan dengan algoritma K-Means.',
+        imageFile: 'dashboard-doku.png',
+        fallbackSvg: visuals.dokuTableau,
+        tools: ['Tableau', 'Python', 'Pandas', 'K-Means Clustering', 'EDA'],
+        problem: 'Diperlukan evaluasi terhadap kinerja berbagai kampanye promo dan karakteristik pelanggan untuk mengetahui jenis promo yang paling efektif mendorong transaksi.',
+        process: 'Saya membersihkan dataset transaksi, melakukan analisis eksplorasi (EDA) terhadap jumlah transaksi, pendapatan, dan tingkat penukaran promo (redemption rate), serta menerapkan pengelompokan pelanggan menggunakan K-Means. Hasil analisis tersebut kemudian divisualisasikan ke dalam dashboard interaktif menggunakan Tableau.',
+        result: 'Menghasilkan Campaign Analytics Dashboard yang memetakan performa tiap jenis promo dan segmen pelanggan, disertai rangkuman insight serta saran langkah perbaikan untuk kampanye berikutnya.',
+        externalLink: null
+      },
+      {
+        id: 3,
+        tags: ['featured', 'ml'],
+        categoryLabel: 'Skripsi • S1 Sains Data UNESA',
+        title: 'Sistem Rekomendasi Unggahan Instagram (Evaluasi ItemKNN, FM, dan DeepFM)',
+        shortDesc: 'Mengembangkan dan membandingkan performa tiga algoritma rekomendasi (ItemKNN, Factorization Machines, dan DeepFM) berbasis implicit feedback serta fitur teks.',
+        imageFile: null,
+        fallbackSvg: visuals.recommenderSkripsi,
+        tools: ['Python', 'Sentence Transformer', 'RecBole', 'ItemKNN', 'Factorization Machines (FM)', 'DeepFM'],
+        problem: 'Data interaksi pengguna pada unggahan Instagram bersifat implicit feedback (tanpa penilaian angka secara langsung) dan memiliki informasi teks yang perlu diolah agar sistem dapat menyarankan unggahan yang relevan.',
+        process: 'Saya melakukan prapemrosesan data interaksi, rekayasa fitur (feature engineering), serta ekstraksi representasi teks unggahan menggunakan Sentence Transformer. Setelah itu, saya membangun dan membandingkan tiga model rekomendasi—yaitu ItemKNN, Factorization Machines (FM), dan DeepFM—menggunakan pustaka RecBole.',
+        result: 'Memperoleh perbandingan performa yang terukur dari ketiga model rekomendasi tersebut berdasarkan metrik evaluasi peringkat Recall@K dan NDCG@K.',
+        externalLink: null
+      },
+      {
+        id: 4,
+        tags: ['ml'],
+        categoryLabel: 'Proyek Kuliah • Pemrosesan Teks',
+        title: 'Klasifikasi Teks & OCR untuk Deteksi Potensi Risiko Bunuh Diri',
+        shortDesc: 'Membandingkan beberapa model klasifikasi teks (terbaik: Linear SVM + Bag-of-Words dengan akurasi 90,50%) yang diterapkan pada aplikasi GUI dengan fitur OCR.',
+        imageFile: null,
+        fallbackSvg: visuals.nlpOcr,
+        tools: ['Python', 'Linear SVM', 'Bag-of-Words', 'Text Preprocessing', 'OCR', 'GUI'],
+        problem: 'Unggahan teks di media sosial terkadang mencerminkan tekanan psikologis atau indikasi menyakiti diri, sehingga dibutuhkan sistem pemrosesan teks yang mampu mengenali pola kalimat berisiko baik dari ketikan maupun gambar.',
+        process: 'Bersama tim, saya mengolah 1.778 data teks melalui 9 tahapan pembersihan teks (seperti normalisasi singkatan, penghapusan tanda baca/URL, stopword removal, dan lemmatization). Kami membandingkan model Random Forest, Logistic Regression, dan Linear SVM menggunakan fitur TF-IDF, Bag-of-Words, dan Word2Vec, lalu menghubungkannya ke antarmuka GUI sederhana yang mendukung input gambar (OCR).',
+        result: 'Model Linear SVM dengan fitur Bag-of-Words memperoleh hasil terbaik dengan akurasi 90,50%, precision 0,93, recall 0,88, dan F1-score 0,90.',
+        externalLink: null
+      },
+      {
+        id: 5,
+        tags: ['ml'],
+        categoryLabel: 'Proyek Kuliah • Pembelajaran Mesin Lanjut',
+        title: 'Sistem Rekomendasi Film Hybrid Menggunakan Analisis Sentimen LSTM & SVD',
+        shortDesc: 'Menggabungkan pendekatan Content-Based Filtering, Collaborative Filtering (SVD), dan analisis sentimen ulasan (LSTM) pada data film TMDB.',
+        imageFile: null,
+        fallbackSvg: visuals.hybridMovie,
+        tools: ['Python', 'Web Scraping', 'LSTM', 'SVD (Surprise)', 'TF-IDF & Cosine Similarity'],
+        problem: 'Banyaknya pilihan film di platform streaming sering membuat penonton bingung menentukan tontonan yang sesuai, sementara sistem rekomendasi biasa belum mempertimbangkan sentimen dari ulasan penonton.',
+        process: 'Kami mengumpulkan 19.183 data ulasan film dari situs TMDB melalui web scraping, lalu membersihkan kolom pengulas, rating, dan teks ulasan. Sistem dibangun dengan memadukan kemiripan genre (TF-IDF & Cosine Similarity), prediksi skor pengguna (SVD dengan 5-fold cross-validation), dan klasifikasi sentimen ulasan menggunakan model LSTM.',
+        result: 'Model Content-Based mencapai rata-rata cosine similarity 0,9903, model SVD menghasilkan rata-rata RMSE 19,18, dan model sentimen LSTM memperoleh akurasi 77,51% (F1-score 81,32%) untuk mengurutkan rekomendasi film.',
+        externalLink: {
+          label: 'Lihat Notebook Google Colab',
+          url: 'https://colab.research.google.com/drive/1DL-LqebEjpFPiMvPqpium0cABSat-xeb?usp=sharing'
+        }
+      },
+      {
+        id: 6,
+        tags: ['ml'],
+        categoryLabel: 'Proyek Kuliah • Pembelajaran Mesin Dasar',
+        title: 'Klasifikasi Tingkat Risiko Penyakit Kanker Paru-Paru (SVM & Regresi Logistik)',
+        shortDesc: 'Membandingkan algoritma Support Vector Machine (SVM) dan Regresi Logistik untuk mengelompokkan tingkat risiko kanker paru-paru pasien.',
+        imageFile: null,
+        fallbackSvg: visuals.lungCancer,
+        tools: ['Python', 'Support Vector Machine', 'Logistic Regression', 'Min-Max Scaler', 'Scikit-learn'],
+        problem: 'Kanker paru-paru memiliki beragam faktor pemicu dari lingkungan maupun gaya hidup, sehingga pemodelan klasifikasi dapat membantu mengenali pola tingkat risiko pasien secara lebih sistematis.',
+        process: 'Kami mengolah dataset Lung Cancer Prediction (1.000 data pasien dengan lebih dari 20 atribut seperti polusi udara, kebiasaan merokok, risiko genetik, dan gejala klinis), melakukan pembersihan data, mengubah label target menjadi 3 tingkat risiko (Low, Medium, High), melakukan normalisasi dengan Min-Max Scaler, serta membandingkan model SVM dan Regresi Logistik.',
+        result: 'Model SVM meraih akurasi 91% dan Regresi Logistik meraih 90,5% pada data uji, dengan kemampuan deteksi kelas risiko tinggi (High) mencapai recall 1,00 dan F1-score 0,98.',
+        externalLink: null
+      },
+      {
+        id: 7,
+        tags: ['algo'],
+        categoryLabel: 'Proyek Kuliah • Desain & Analisis Algoritma',
+        title: 'Perbandingan Algoritma Dijkstra, Bellman-Ford, dan A* untuk Rute Wirawiri Surabaya',
+        shortDesc: 'Memodelkan jaringan halte transportasi umum Wirawiri Surabaya untuk membandingkan jalur terpendek dan waktu komputasi tiga algoritma pencarian rute.',
+        imageFile: null,
+        fallbackSvg: visuals.wirawiriGraph,
+        tools: ['Python', 'Algoritma A*', 'Dijkstra', 'Bellman-Ford', 'Pemodelan Matriks & Graf'],
+        problem: 'Diperlukan perbandingan kinerja algoritma pencarian rute untuk mengetahui metode yang paling efisien dalam menentukan jalur terpendek antar-halte transportasi umum Wirawiri Surabaya.',
+        process: 'Kami mengumpulkan data titik halte dari aplikasi Gobis Suroboyo Bus (koridor FD01, FD02, FD03, FD06, dan FD07), menyusunnya ke dalam matriks jarak antar-halte, lalu menguji pencarian rute dan waktu eksekusi algoritma Dijkstra, Bellman-Ford, dan A* pada lebih dari 80 halte.',
+        result: 'Ketiga algoritma menghasilkan rute terpendek yang sama (pada uji rute Wonorejo ke Wuni sejauh 7.570 meter), dengan algoritma A* mencatat waktu komputasi tercepat (sekitar 0,0001 detik) dibandingkan Dijkstra dan Bellman-Ford.',
+        externalLink: null
+      },
+      {
+        id: 8,
+        tags: ['algo'],
+        categoryLabel: 'Proyek Kuliah • Struktur Data & Algoritma',
+        title: 'Prototipe Aplikasi Marketplace Sederhana Berbasis Python & CSV',
+        shortDesc: 'Mengembangkan simulasi aplikasi marketplace menggunakan Python dengan fitur pencarian, pengurutan produk, chatbot bantuan, dan pencatatan transaksi ke CSV.',
+        imageFile: null,
+        fallbackSvg: visuals.marketplaceAlgo,
+        tools: ['Python', 'Binary Search', 'Bubble Sort', 'Pengelolaan File CSV', 'Algoritma Dasar'],
+        problem: 'Mempraktikkan penerapan struktur data dan algoritma pencarian maupun pengurutan ke dalam alur simulasi transaksi jual-beli sederhana.',
+        process: 'Dalam proyek kelompok ini, kami menerapkan algoritma Binary Search dan Bubble Sort untuk pencarian serta pengurutan katalog produk berbasis CSV. Secara khusus, saya bertugas mengerjakan bagian laman pembayaran (pengisian data diri, metode pembayaran, dan penyimpanan otomatis ke CSV) serta fitur chatbot sederhana.',
+        result: 'Menghasilkan program simulasi marketplace yang dapat menjalankan alur login, pencarian dan pengurutan barang, layanan chatbot, hingga pencatatan riwayat pembayaran ke dalam file CSV.',
+        externalLink: null
+      }
+    ];
+
+    function renderProjectVisual(project) {
+      if (project.imageFile) {
+        return `
+          <div class="w-full h-full relative">
+            <img src="${project.imageFile}" alt="${project.title}"
+              class="w-full h-full object-cover object-top"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div style="display:none;" class="w-full h-full">${project.fallbackSvg}</div>
+          </div>
+        `;
+      }
+      return `<div class="w-full h-full">${project.fallbackSvg}</div>`;
+    }
+
+    const projectsGrid = document.getElementById('projects-grid');
+
+    function renderProjects(filter = 'all') {
+      projectsGrid.innerHTML = '';
+      const filtered = filter === 'all'
+        ? projectsData
+        : projectsData.filter(item => item.tags.includes(filter));
+
+      filtered.forEach(project => {
+        const card = document.createElement('article');
+        card.className = 'group rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between cursor-pointer';
+        card.onclick = () => openProjectModal(project);
+
+        card.innerHTML = `
+          <div>
+            <div class="aspect-video w-full overflow-hidden relative border-b border-slate-200/60 dark:border-slate-800">
+              <div class="w-full h-full group-hover:scale-105 transition-transform duration-500">
+                ${renderProjectVisual(project)}
+              </div>
+              <span class="absolute bottom-3 left-3 px-3 py-1 rounded-xl text-[11px] font-semibold bg-slate-950/85 text-white backdrop-blur-md border border-white/10">
+                ${project.categoryLabel}
+              </span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug">
+                ${project.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2.5 line-clamp-3 leading-relaxed">
+                ${project.shortDesc}
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 flex items-center justify-between gap-2">
+            <div class="flex flex-wrap gap-1.5">
+              ${project.tools.slice(0, 3).map(t => `<span class="px-2.5 py-1 rounded-lg font-mono text-[11px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">${t}</span>`).join('')}
+            </div>
+            <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 shrink-0 group-hover:translate-x-0.5 transition-transform">
+              Rincian &rarr;
+            </span>
+          </div>
+        `;
+        projectsGrid.appendChild(card);
+      });
+    }
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-indigo-600', 'text-white', 'shadow-sm');
+          b.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-800');
+        });
+        btn.classList.add('bg-indigo-600', 'text-white', 'shadow-sm');
+        btn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-800');
+        renderProjects(btn.dataset.filter);
+      });
+    });
+
+    const modal = document.getElementById('project-modal');
+    const modalBody = document.getElementById('modal-body');
+    const closeModalBtn = document.getElementById('close-modal');
+
+    function openProjectById(id) {
+      const found = projectsData.find(p => p.id === id);
+      if (found) openProjectModal(found);
+    }
+
+    function openProjectModal(project) {
+      const externalBtnHtml = project.externalLink
+        ? `<a href="${project.externalLink.url}" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition-colors">
+             <span>${project.externalLink.label}</span>
+             <span>&nearr;</span>
+           </a>`
+        : '';
+
+      modalBody.innerHTML = `
+        <span class="inline-block px-3 py-1 rounded-xl text-xs font-semibold bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 mb-3">
+          ${project.categoryLabel}
+        </span>
+        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white pr-8 mb-4 leading-snug">
+          ${project.title}
+        </h3>
+        <div class="rounded-2xl overflow-hidden mb-6 aspect-video border border-slate-200 dark:border-slate-800">
+          ${renderProjectVisual(project)}
+        </div>
+        <div class="space-y-4 text-sm sm:text-base">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1">1. Latar Belakang Masalah</h4>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">${project.problem}</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60">
+            <h4 class="font-bold text-slate-900 dark:text-white mb-1">2. Proses Pengerjaan</h4>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">${project.process}</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/25">
+            <h4 class="font-bold text-emerald-800 dark:text-emerald-300 mb-1">3. Hasil yang Diperoleh</h4>
+            <p class="text-emerald-900 dark:text-emerald-100 leading-relaxed">${project.result}</p>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="font-mono text-xs font-semibold text-slate-500 dark:text-slate-400 mr-1">Perangkat &amp; Metode:</span>
+            ${project.tools.map(t => `<span class="px-2.5 py-1 rounded-xl font-mono text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200">${t}</span>`).join('')}
+          </div>
+          ${externalBtnHtml}
+        </div>
+      `;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    closeModalBtn.addEventListener('click', closeProjectModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeProjectModal(); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeProjectModal();
+    });
+
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const iconSun = document.getElementById('icon-sun');
+    const iconMoon = document.getElementById('icon-moon');
+
+    themeToggleBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      iconSun.classList.toggle('hidden', !isDark);
+      iconMoon.classList.toggle('hidden', isDark);
+    });
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    const copyEmailBtn = document.getElementById('copy-email-btn');
+    const toast = document.getElementById('toast');
+    let toastTimeout;
+
+    copyEmailBtn.addEventListener('click', () => {
+      const email = copyEmailBtn.dataset.email;
+      const tempInput = document.createElement('textarea');
+      tempInput.value = email;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+
+      toast.textContent = `Alamat email (${email}) berhasil disalin!`;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => toast.classList.add('translate-y-20', 'opacity-0'), 2800);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    renderProjects('all');
+  </script>
+</body>
+</html>
