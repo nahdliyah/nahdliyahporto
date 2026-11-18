@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="noindex, nofollow" />
   <title>Nahdliyah Zahrah — Portofolio Data Analyst &amp; Sains Data</title>
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -430,16 +430,18 @@
             <span class="font-mono text-xs font-bold px-3.5 py-1.5 rounded-xl bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800">
               IPK 3.70 / 4.00
             </span>
-            <!-- <button type="button" onclick="openTranscriptModal()" class="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
-              Lihat Transkrip &rarr; -->
+            <!--
+            <button type="button" onclick="openTranscriptModal()" class="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+              Lihat Transkrip &rarr;
             </button>
+            -->
           </div>
         </div>
       </div>
     </section>
 
     <!-- =========================================================
-         BAGIAN 5: SERTIFIKASI TERPILIH (4 SERTIFIKAT + PRATINJAU)
+         BAGIAN 5: SERTIFIKASI TERPILIH (4 SERTIFIKAT + PRATINJAU GDRIVE)
     ========================================================= -->
     <section id="sertifikasi" class="py-14 sm:py-20 border-t border-slate-200/80 dark:border-slate-800/80">
       <div class="mb-10">
@@ -477,7 +479,6 @@
         </div>
 
         <div class="flex flex-wrap items-center gap-3">
-          <!-- Ganti 628XXXXXXXXXX dengan nomor WhatsApp Anda (diawali 62 tanpa tanda + atau spasi) -->
           <a href="https://wa.me/6281235780107" target="_blank" rel="noopener noreferrer"
             class="px-5 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm shadow-md shadow-emerald-600/20 transition-all inline-flex items-center gap-2">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
@@ -506,7 +507,7 @@
   </footer>
 
   <!-- =========================================================
-       MODAL RINCIAN PROYEK
+       MODAL RINCIAN PROYEK & PRATINJAU SERTIFIKAT
   ========================================================= -->
   <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm">
     <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative">
@@ -526,7 +527,7 @@
   </div>
 
   <!-- =========================================================
-       JAVASCRIPT: VISUAL & DATA PROYEK (BAHASA SOPAN & LUGAS)
+       JAVASCRIPT: VISUAL, DATA PROYEK & PRATINJAU GOOGLE DRIVE
   ========================================================= -->
   <script>
     const visuals = {
@@ -885,16 +886,22 @@
       document.body.style.overflow = 'hidden';
     }
 
+    // Helper: Ubah link share Google Drive menjadi tautan pratinjau (embed)
+    function toGoogleDrivePreview(url) {
+      if (!url) return null;
+      const match = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+      return match ? `https://drive.google.com/file/d/${match[1]}/preview` : url;
+    }
+
     // =========================================================
-    // PRATINJAU TRANSKRIP AKADEMIK (PENDIDIKAN S1 SAINS DATA)
+    // PRATINJAU TRANSKRIP AKADEMIK (OPSIONAL VIA GOOGLE DRIVE)
     // =========================================================
     const transcriptData = {
       title: 'Transkrip Akademik — S1 Sains Data',
       institution: 'Universitas Negeri Surabaya (UNESA)',
       period: 'Agustus 2022 – Juli 2026',
       gpa: 'IPK 3.70 / 4.00',
-      pdfFile: 'transkrip-nilai.pdf', // Unggah file PDF transkrip ke GitHub dengan nama ini
-      driveUrl: null, // Opsional: ganti null dengan link Google Drive dalam tanda kutip jika ingin menautkan ke Drive
+      driveUrl: null, // Tempel link Google Drive di sini jika sewaktu-waktu ingin ditampilkan
       summary: 'Transkrip nilai akademik Program Studi S1 Sains Data, Universitas Negeri Surabaya, mencakup mata kuliah inti Data Mining, Machine Learning, Text Processing, Analisis Multivariat, Basis Data, Kecerdasan Buatan, serta Struktur Data & Algoritma.'
     };
 
@@ -921,18 +928,20 @@
               <span class="text-slate-500 dark:text-slate-400 mt-0.5 block">Basis Data, Pemrosesan Teks, Kecerdasan Buatan, Struktur Data &amp; Algoritma</span>
             </div>
           </div>
-          <p class="text-[11px] text-slate-500 dark:text-slate-400">
-            Catatan: Unggah file PDF dengan nama <code class="font-mono text-indigo-600 dark:text-indigo-400">${transcriptData.pdfFile}</code> ke repository GitHub untuk menampilkan pratinjau dokumen PDF langsung di sini.
-          </p>
         </div>
       `;
     }
 
     function openTranscriptModal() {
+      const embedUrl = toGoogleDrivePreview(transcriptData.driveUrl);
+      const previewContent = embedUrl
+        ? `<iframe src="${embedUrl}" title="${transcriptData.title}" class="w-full h-80 sm:h-96 bg-slate-100 dark:bg-slate-950" allow="autoplay"></iframe>`
+        : buildTranscriptFallbackCard();
+
       const driveBtnHtml = transcriptData.driveUrl
         ? `<a href="${transcriptData.driveUrl}" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition-colors">
-             <span>Buka Transkrip di Google Drive</span>
+             <span>Buka di Google Drive</span>
              <span>&nearr;</span>
            </a>`
         : '';
@@ -944,18 +953,18 @@
         <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white pr-8 mb-4 leading-snug">
           ${transcriptData.title}
         </h3>
-        <div id="transcript-preview-box" class="rounded-2xl overflow-hidden mb-5 border border-slate-200 dark:border-slate-800">
-          ${buildTranscriptFallbackCard()}
+        <div class="rounded-2xl overflow-hidden mb-5 border border-slate-200 dark:border-slate-800">
+          ${previewContent}
         </div>
         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60 text-sm sm:text-base">
           <h4 class="font-bold text-slate-900 dark:text-white mb-1">Keterangan Akademik</h4>
           <p class="text-slate-600 dark:text-slate-300 leading-relaxed">${transcriptData.summary}</p>
         </div>
-        <div id="transcript-footer-actions" class="mt-5 pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
+        <div class="mt-5 pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
           <span class="font-mono text-xs text-slate-500 dark:text-slate-400">
             Institusi: <strong class="text-slate-700 dark:text-slate-200">${transcriptData.institution}</strong> (${transcriptData.gpa})
           </span>
-          <div class="flex flex-wrap items-center gap-2" id="transcript-links">
+          <div class="flex flex-wrap items-center gap-2">
             ${driveBtnHtml}
           </div>
         </div>
@@ -964,37 +973,10 @@
       modal.classList.remove('hidden');
       modal.classList.add('flex');
       document.body.style.overflow = 'hidden';
-
-      // Cek otomatis apakah file transkrip-nilai.pdf sudah tersedia di repository
-      if (transcriptData.pdfFile && window.location.protocol.startsWith('http')) {
-        fetch(transcriptData.pdfFile, { method: 'HEAD' })
-          .then(res => {
-            if (res.ok) {
-              const previewBox = document.getElementById('transcript-preview-box');
-              const linksBox = document.getElementById('transcript-links');
-              if (previewBox) {
-                previewBox.innerHTML = `
-                  <iframe src="${transcriptData.pdfFile}#view=FitH" title="${transcriptData.title}"
-                    class="w-full h-80 sm:h-96 bg-slate-100 dark:bg-slate-950"></iframe>
-                `;
-              }
-              if (linksBox) {
-                linksBox.insertAdjacentHTML('afterbegin', `
-                  <a href="${transcriptData.pdfFile}" target="_blank" rel="noopener noreferrer"
-                     class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition-colors">
-                     <span>Buka Dokumen PDF</span>
-                     <span>&nearr;</span>
-                  </a>
-                `);
-              }
-            }
-          })
-          .catch(() => {});
-      }
     }
 
     // =========================================================
-    // DATA & PRATINJAU SERTIFIKASI (4 SERTIFIKAT TERPILIH)
+    // DATA & PRATINJAU SERTIFIKASI (4 SERTIFIKAT VIA GOOGLE DRIVE)
     // =========================================================
     const certificatesData = [
       {
@@ -1003,7 +985,6 @@
         issuer: 'Google for Education',
         year: 'Nov 2026 – Nov 2029',
         badge: 'AI & Productivity',
-        // pdfFile: 'sertif-google.pdf',
         driveUrl: 'https://drive.google.com/file/d/1xJ5yyAXSXEOEpqv_6PUBkcyrJ_Qr3gyq/view?usp=sharing',
         description: 'Kualifikasi resmi dari Google for Education yang memvalidasi pemahaman dasar, keterampilan, dan kompetensi penggunaan Google AI secara efektif dalam lingkungan akademik dan analitik.'
       },
@@ -1013,7 +994,6 @@
         issuer: 'Bitlabs Academy × Kampus Merdeka',
         year: '2024',
         badge: 'Data Analytics & BI',
-        // pdfFile: 'sertif-bitlabs.pdf',
         driveUrl: 'https://drive.google.com/file/d/1YeTULbWjOeOB5jW6xmBnaSG5YXjla7he/view?usp=sharing',
         description: 'Program Studi Independen Bersertifikat (MSIB) yang berfokus pada pengolahan dan pengoperasian data menggunakan Microsoft Excel, SQL, analisis eksploratif (EDA), dan perancangan dashboard interaktif Tableau.'
       },
@@ -1023,7 +1003,6 @@
         issuer: 'Amazon Web Services (AWS)',
         year: '2024',
         badge: 'Cloud Computing',
-        // pdfFile: 'sertif-aws.pdf',
         driveUrl: 'https://drive.google.com/file/d/1inWWogsvJkNoBU6V05thwUYmLpWonuob/view?usp=sharing',
         description: 'Pelatihan dasar konsep komputasi awan (cloud computing), layanan inti AWS, keamanan cloud, serta arsitektur infrastruktur pendukung aplikasi data.'
       },
@@ -1033,7 +1012,6 @@
         issuer: 'Kementerian Kominfo RI',
         year: '2023',
         badge: 'Digital Literacy',
-        // pdfFile: 'sertif-kominfo.pdf',
         driveUrl: 'https://drive.google.com/file/d/1sVPJP3XQcygohbcn9g0LxKcdaGT6RWY-/view?usp=sharing',
         description: 'Pelatihan pengenalan ekosistem teknologi digital interaktif dalam rangkaian program Digital Talent Scholarship (DTS) Kementerian Komunikasi dan Informatika.'
       }
@@ -1050,9 +1028,6 @@
           </h4>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
             Diberikan kepada <strong class="text-slate-900 dark:text-white">Nahdliyah Zahrah</strong> oleh <strong>${cert.issuer}</strong>
-          </p>
-          <p class="text-[11px] text-slate-500 dark:text-slate-400 pt-2">
-            Catatan: Unggah file <code class="font-mono text-indigo-600 dark:text-indigo-400">${cert.pdfFile}</code> ke repository GitHub untuk menampilkan pratinjau dokumen PDF langsung di sini.
           </p>
         </div>
       `;
@@ -1096,6 +1071,11 @@
     }
 
     function openCertificateModal(cert) {
+      const embedUrl = toGoogleDrivePreview(cert.driveUrl);
+      const previewContent = embedUrl
+        ? `<iframe src="${embedUrl}" title="${cert.title}" class="w-full h-80 sm:h-96 bg-slate-100 dark:bg-slate-950" allow="autoplay"></iframe>`
+        : buildCertificateFallbackCard(cert);
+
       const driveBtnHtml = cert.driveUrl
         ? `<a href="${cert.driveUrl}" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition-colors">
@@ -1111,8 +1091,8 @@
         <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white pr-8 mb-4 leading-snug">
           ${cert.title}
         </h3>
-        <div id="cert-preview-box" class="rounded-2xl overflow-hidden mb-5 border border-slate-200 dark:border-slate-800">
-          ${buildCertificateFallbackCard(cert)}
+        <div class="rounded-2xl overflow-hidden mb-5 border border-slate-200 dark:border-slate-800">
+          ${previewContent}
         </div>
         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60 text-sm sm:text-base">
           <h4 class="font-bold text-slate-900 dark:text-white mb-1">Deskripsi Sertifikasi</h4>
@@ -1122,7 +1102,7 @@
           <span class="font-mono text-xs text-slate-500 dark:text-slate-400">
             Penerbit: <strong class="text-slate-700 dark:text-slate-200">${cert.issuer}</strong>
           </span>
-          <div class="flex flex-wrap items-center gap-2" id="cert-links">
+          <div class="flex flex-wrap items-center gap-2">
             ${driveBtnHtml}
           </div>
         </div>
@@ -1131,32 +1111,6 @@
       modal.classList.remove('hidden');
       modal.classList.add('flex');
       document.body.style.overflow = 'hidden';
-
-      if (cert.pdfFile && window.location.protocol.startsWith('http')) {
-        fetch(cert.pdfFile, { method: 'HEAD' })
-          .then(res => {
-            if (res.ok) {
-              const previewBox = document.getElementById('cert-preview-box');
-              const linksBox = document.getElementById('cert-links');
-              if (previewBox) {
-                previewBox.innerHTML = `
-                  <iframe src="${cert.pdfFile}#view=FitH" title="${cert.title}"
-                    class="w-full h-80 sm:h-96 bg-slate-100 dark:bg-slate-950"></iframe>
-                `;
-              }
-              if (linksBox) {
-                linksBox.insertAdjacentHTML('afterbegin', `
-                  <a href="${cert.pdfFile}" target="_blank" rel="noopener noreferrer"
-                     class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition-colors">
-                     <span>Buka Dokumen PDF</span>
-                     <span>&nearr;</span>
-                  </a>
-                `);
-              }
-            }
-          })
-          .catch(() => {});
-      }
     }
 
     function closeProjectModal() {
