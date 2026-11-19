@@ -676,7 +676,7 @@
         imageFile: 'dashboard-siplah.png',
         fallbackSvg: visuals.siplahStreamlit,
         tools: ['Python', 'PostgreSQL', 'Streamlit', 'Docker', 'Railway', 'Plotly'],
-        problem: 'Data transaksi dan pendaftaran merchant berasal dari beberapa sumber (Google Spreadsheet dan PostgreSQL) dengan format yang belum seragam, sehingga tim membutuhkan satu dashboard terpusat yang mudah dipantau secara berkala.',
+        problem: 'Data transaksi dan pendaftaran merchant berasal dari beberapa sumber (Google Spreadsheet) dengan format yang belum seragam, sehingga tim membutuhkan satu dashboard terpusat yang mudah dipantau secara berkala.',
         process: 'Saya melakukan pembersihan dan penyeragaman format data menggunakan Python (Pandas), lalu menyusun struktur penyimpanan di PostgreSQL. Selanjutnya, saya membangun antarmuka dashboard di Streamlit, membungkusnya dengan Docker, dan melakukan deployment ke Railway.',
         result: 'Dashboard berjalan stabil di Railway dan digunakan tim untuk memantau ringkasan transaksi (Total PO, Total Nominal, PPh 22, PPN, serta pertumbuhan merchant) berdasarkan periode waktu, wilayah, dan metode pembayaran.',
         externalLink: null
@@ -691,7 +691,7 @@
         fallbackSvg: visuals.dokuTableau,
         tools: ['Tableau', 'Python', 'Pandas', 'EDA', 'K-Means'],
         problem: 'Diperlukan evaluasi terhadap performa berbagai program promo dan karakteristik pelanggan untuk mengetahui jenis kampanye serta waktu promosi yang paling efektif mendorong transaksi.',
-        process: 'Saya mengerjakan proyek ini secara mandiri mulai dari pembersihan data, eksplorasi pola transaksi (EDA), hingga pengelompokan segmen pelanggan menggunakan K-Means. Seluruh temuan utama kemudian saya sajikan dalam dashboard interaktif di Tableau.',
+        process: 'Saya mengerjakan proyek ini mulai dari pembersihan data, eksplorasi pola transaksi (EDA), hingga pengelompokan segmen pelanggan menggunakan K-Means. Seluruh temuan utama kemudian saya sajikan dalam dashboard interaktif di Tableau.',
         result: 'Dari 108.594 transaksi (23.207 pelanggan), promo "Ceban" mendominasi volume transaksi (>100 ribu transaksi), sementara "Jempolan" dan "Barokah Ramadan" mencatat tingkat penukaran tertinggi hingga 99%. Aktivitas transaksi memuncak pada hari kerja pukul 09.00–11.00, dan pelanggan terpetakan ke dalam 3 segmen utama sebagai dasar rekomendasi program loyalitas.',
         externalLink: {
           label: 'Buka Dashboard Tableau',
@@ -707,7 +707,7 @@
         imageFile: null,
         fallbackSvg: visuals.recommenderSkripsi,
         tools: ['Python', 'RecBole', 'Sentence Transformer', 'ItemKNN', 'Factorization Machines (FM)', 'DeepFM'],
-        problem: 'Tingginya arus berita di media sosial memicu information overload, sementara interaksi komentar pengguna memiliki tingkat sparsity sangat tinggi (99,41%) yang menyulitkan metode rekomendasi konvensional.',
+        problem: 'Tingginya arus berita di media sosial memicu information overload, sementara interaksi komentar pengguna memiliki tingkat sparsity sebesar (99,41%) yang menyulitkan metode rekomendasi konvensional.',
         process: 'Saya mengolah 12.361 interaksi komentar dari 9.371 pengguna pada 223 unggahan @kompascom sebagai implicit feedback. Untuk model FM dan DeepFM, saya menambahkan fitur kontekstual berupa representasi semantik teks (Sentence Transformer), jumlah likes dan komentar (log & Min-Max scaling), serta jenis unggahan, lalu mengevaluasi ketiganya menggunakan RecBole.',
         result: 'Model berbasis Context-Aware terbukti lebih unggul dibandingkan ItemKNN pada data sparse. Factorization Machines (FM) meraih performa terbaik di seluruh metrik (Recall@20: 0,1828; NDCG@20: 0,0669), mengungguli DeepFM (Recall@20: 0,1575) dan hampir menggandakan capaian ItemKNN (Recall@20: 0,0916).',
         externalLink: null
